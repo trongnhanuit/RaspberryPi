@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.android.raspberrypi.MainActivity" >
+
+    <EditText
+        android:id="@+id/etIp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="23dp"
+        android:ems="10"
+        android:text="192.168.2.128" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etIp"
+        android:layout_below="@+id/etIp"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:text="pi" />
+
+    <EditText
+        android:id="@+id/etPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etUsername"
+        android:layout_below="@+id/etUsername"
+        android:layout_marginTop="29dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text="raspberry" />
+
+    <EditText
+        android:id="@+id/etCmd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etPass"
+        android:layout_below="@+id/btnConnect"
+        android:layout_marginTop="26dp"
+        android:ems="10" />
+
+    <EditText
+        android:id="@+id/etPort"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etUsername"
+        android:layout_alignRight="@+id/etPass"
+        android:ems="10"
+        android:text="2222" />
+
+    <Button
+        android:id="@+id/btnConnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etPass"
+        android:layout_below="@+id/etPass"
+        android:layout_marginTop="26dp"
+        android:text="Connect" />
+
+    <Button
+        android:id="@+id/btnExcute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/etIp"
+        android:layout_below="@+id/etCmd"
+        android:layout_marginTop="22dp"
+        android:text="Excute" />
+
+    <Button
+        android:id="@+id/btnClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etCmd"
+        android:layout_alignRight="@+id/etCmd"
+        android:layout_marginRight="21dp"
+        android:text="Close" />
+
+</RelativeLayout>
